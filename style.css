@@ -244,3 +244,44 @@ body {
 .img-col {
     border-bottom-left-radius: 100%;
 }
+
+.slide-control {
+	display: flex;
+	padding: 5px;
+	position: absolute;
+	bottom: 0;
+	left: 50%;
+	transform: translateX(-50%);
+}
+
+.slide-control div {
+	height: 50px;
+	width: 50px;
+	margin: 10px;
+	transition: .5s;
+}
+
+.slide-control div:hover {
+	cursor: pointer;
+	transform: translateY(-30px);
+	border-bottom: 2px solid var(--black);
+}
+
+.slide-control div img {
+	height: auto;
+	width: 100%;
+	filter: grayscale(100%);
+	transform: rotate(-45deg);
+}
+
+.slide-control div:hover img {
+	filter: unset;
+}
+
+.slide-control div.active img {
+	filter: unset;
+}
+
+.slide-control div.active {
+	border-bottom: 2px solid var(--black);
+}
